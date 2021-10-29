@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react/cjs/react.development';
-import { Card} from 'react-bootstrap';
+
 
 function EthereumRecommendation(props) {
     const [buyETHRecommendation, setBuyETHRecommendation] = useState('--');
@@ -32,18 +32,19 @@ function EthereumRecommendation(props) {
     },[props, sellETHRecommendation])
 
     return (
-        <Card style={{ width: '40rem' }}>
-            <Card.Body>
-                <Card.Title> Recommendation:</Card.Title>
-                <Card.Text>
-                    {buyETHRecommendation}
-                </Card.Text>
-                <Card.Text>
-                    {sellETHRecommendation}
-                </Card.Text>
-            </Card.Body>
-        </Card>
-
+        <div className="centered">
+            <section className="cards">
+                <article className="card" style={{width: "30rem"}}>
+                    <h3> Recommendation:</h3>
+                    <p>
+                        {buyETHRecommendation}
+                    </p>
+                    <p>
+                        {sellETHRecommendation}
+                    </p>
+                </article>
+            </section>
+        </div>
     )
 }
 

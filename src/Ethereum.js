@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { Card, CardGroup} from 'react-bootstrap';
+
 
 function Ethereum({data, data2}) {
 
@@ -19,30 +19,31 @@ function Ethereum({data, data2}) {
     }, [data2, coinbaseETHAPrice, coinbaseETHBPrice]);
 
       return (
-          <CardGroup style={{ width: '40rem' }}>
-              <Card style={{ width: '20rem' }}>
-                  <Card.Body>
-                      <Card.Title>Binance</Card.Title>
-                      <Card.Text>
+
+          <div className="centered">
+              <section className="cards">
+                  <article className="card">
+                      <h3>Binance</h3>
+                      <p>
                           Best Ask Price: ${binanceETHAPrice}
-                      </Card.Text>
-                      <Card.Text>
+                      </p>
+                      <p>
                           Best Bid Price: ${binanceETHBPrice}
-                      </Card.Text>
-                  </Card.Body>
-              </Card>
-              <Card style={{ width: '20rem' }}>
-                  <Card.Body>
-                      <Card.Title>Coinbase</Card.Title>
-                      <Card.Text>
+                      </p>
+                  </article>
+
+                  <article className="card">
+                      <h3>Coinbase</h3>
+                      <p>
                           Best Ask Price: ${coinbaseETHAPrice}
-                      </Card.Text>
-                      <Card.Text>
+                      </p>
+                      <p>
                           Best Bid Price: ${coinbaseETHBPrice}
-                      </Card.Text>
-                  </Card.Body>
-              </Card>
-          </CardGroup>
+                      </p>
+                  </article>
+              </section>
+          </div>
+
       )
   }
   

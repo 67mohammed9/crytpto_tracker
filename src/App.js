@@ -3,9 +3,8 @@ import Bitcoin from './Bitcoin';
 import Ethereum from './Ethereum'
 import BitcoinRecommendation from './BitcoinRecommendation';
 import EthereumRecommendation from './EthereumRecommendation';
-import { Card, CardGroup} from 'react-bootstrap';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 
@@ -54,41 +53,30 @@ function App() {
 
   return (
     <div className="App">
-      <Card.Title>Cryptocurrency Tracker</Card.Title>
-      <CardGroup style={{
-        width: '90rem',
-        height: '40rem',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }} >
-        <Card style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
-          <Card.Body>
-            <Card.Title>Bitcoin BTC USD</Card.Title>
-            <Bitcoin data={binanceBTCData} data2={coinbaseBTCData} />
-            <BitcoinRecommendation
-              binanceBTCData={binanceBTCData}
-              coinbaseBTCData={coinbaseBTCData} />
-          </Card.Body>
-        </Card>
-        <Card style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
-          <Card.Body>
-            <Card.Title>Ethereum ETH USD</Card.Title>
-            <Ethereum data={binanceETHData} data2={coinbaseETHData} />
-            <EthereumRecommendation
-              binanceETHData={binanceETHData}
-              coinbaseETHData={coinbaseETHData} />
-          </Card.Body>
-        </Card>
-      </CardGroup>
+      <h1>Cryptocurrency Tracker</h1>
+      <section className="cards" 
+        style={{
+          margin: "25px",
+          width: "99vw",
+          height: "99vh",
+          display: "flex",
+          justifyContent: "space-evenly",
+          alignItems: "center"  }}>
+        <article className="card" style={{ width: "40em", height: "30rem"}}>
+          <h2 className="card-title">Bitcoin BTC USD</h2>
+          <Bitcoin data={binanceBTCData} data2={coinbaseBTCData} />
+          <BitcoinRecommendation
+            binanceBTCData={binanceBTCData}
+            coinbaseBTCData={coinbaseBTCData} />
+        </article>
+        <article className="card" style={{ width: "40em", height: "30rem"  }}>
+          <h2 className="card-title">Ethereum ETH USD</h2>
+          <Ethereum data={binanceETHData} data2={coinbaseETHData} />
+          <EthereumRecommendation
+            binanceETHData={binanceETHData}
+            coinbaseETHData={coinbaseETHData} />
+        </article>
+      </section>
     </div>
   );
 }

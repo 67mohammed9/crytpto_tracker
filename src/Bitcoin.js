@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Card, CardGroup} from 'react-bootstrap';
+
 
 
 function Bitcoin({ data, data2 }) {
@@ -21,31 +21,29 @@ function Bitcoin({ data, data2 }) {
 
 
     return (
-        <CardGroup style={{ width: '40rem' }}>
-            <Card style={{ width: '20rem' }}>
-                <Card.Body>
-                    <Card.Title>Binance</Card.Title>
-                    <Card.Text>
+        <div className="centered">
+            <section className="cards">
+                <article className="card">
+                    <h3>Binance</h3>
+                    <p>
                         Best Ask Price: ${binanceBTCAPrice}
-                    </Card.Text>
-                    <Card.Text>
+                    </p>
+                    <p>
                         Best Bid Price: ${binanceBTCBPrice}
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-            <Card style={{ width: '20rem' }}>
-                <Card.Body>
-                    <Card.Title>Coinbase</Card.Title>
-                    <Card.Text>
-                        Best Ask Price: ${coinbaseBTCAPrice}
-                    </Card.Text>
-                    <Card.Text>
-                        Best Bid Price: ${coinbaseBTCBPrice}
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-        </CardGroup>
+                    </p>
+                </article>
 
+                <article className="card">
+                    <h3>Coinbase</h3>
+                    <p>
+                        Best Ask Price: ${coinbaseBTCAPrice}
+                    </p>
+                    <p>
+                        Best Bid Price: ${coinbaseBTCBPrice}
+                    </p>
+                </article>
+            </section>
+        </div>
     )
 }
 
