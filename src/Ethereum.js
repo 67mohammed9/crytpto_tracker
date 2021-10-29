@@ -19,26 +19,24 @@ function Ethereum({data, data2}) {
     }, [data2, coinbaseETHAPrice, coinbaseETHBPrice]);
 
       return (
-
-          <div className="centered">
-              <section className="cards">
-                  <article className="card">
+          <div>
+              <section className="cards" style={{justifyContent: "center"}}>
+                  <article className="card" style={{backgroundColor: "#ffbf00"}}>
                       <h3>Binance</h3>
                       <p>
-                          Best Ask Price: ${binanceETHAPrice}
+                          Buy Price: ${binanceETHAPrice}
                       </p>
                       <p>
-                          Best Bid Price: ${binanceETHBPrice}
+                          Sell Price: ${binanceETHBPrice}
                       </p>
                   </article>
-
-                  <article className="card">
+                  <article className="card" style={{backgroundColor: "#00ffff"}}>
                       <h3>Coinbase</h3>
                       <p>
-                          Best Ask Price: ${coinbaseETHAPrice}
+                          Buy Price: ${coinbaseETHAPrice}
                       </p>
                       <p>
-                          Best Bid Price: ${coinbaseETHBPrice}
+                          Sell Price: ${coinbaseETHBPrice}
                       </p>
                   </article>
               </section>

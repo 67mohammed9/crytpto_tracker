@@ -21,25 +21,24 @@ function Bitcoin({ data, data2 }) {
 
 
     return (
-        <div className="centered">
-            <section className="cards">
-                <article className="card">
+        <div>
+            <section className="cards" style={{justifyContent: "center"}}>
+                <article className="card" style={{backgroundColor: "#ffbf00"}}>
                     <h3>Binance</h3>
                     <p>
-                        Best Ask Price: ${binanceBTCAPrice}
+                        Buy Price: ${binanceBTCAPrice}
                     </p>
                     <p>
-                        Best Bid Price: ${binanceBTCBPrice}
+                        Sell Price: ${binanceBTCBPrice}
                     </p>
                 </article>
-
-                <article className="card">
+                <article className="card" style={{backgroundColor: "#00ffff"}}>
                     <h3>Coinbase</h3>
                     <p>
-                        Best Ask Price: ${coinbaseBTCAPrice}
+                        Buy Price: ${coinbaseBTCAPrice}
                     </p>
                     <p>
-                        Best Bid Price: ${coinbaseBTCBPrice}
+                        Sell Price: ${coinbaseBTCBPrice}
                     </p>
                 </article>
             </section>

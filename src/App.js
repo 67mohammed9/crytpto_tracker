@@ -54,22 +54,15 @@ function App() {
   return (
     <div className="App">
       <h1>Cryptocurrency Tracker</h1>
-      <section className="cards" 
-        style={{
-          margin: "25px",
-          width: "99vw",
-          height: "99vh",
-          display: "flex",
-          justifyContent: "space-evenly",
-          alignItems: "center"  }}>
-        <article className="card" style={{ width: "40em", height: "30rem"}}>
+      <section className="cards" style={{ justifyContent: "space-around"}}>
+        <article className="card" style={{ width: "40em", height: "25rem", backgroundColor:"#ffebcc"}}>
           <h2 className="card-title">Bitcoin BTC USD</h2>
           <Bitcoin data={binanceBTCData} data2={coinbaseBTCData} />
           <BitcoinRecommendation
             binanceBTCData={binanceBTCData}
             coinbaseBTCData={coinbaseBTCData} />
         </article>
-        <article className="card" style={{ width: "40em", height: "30rem"  }}>
+        <article className="card" style={{ width: "40em", height: "25rem", backgroundColor:"#ffebcc"}}>
           <h2 className="card-title">Ethereum ETH USD</h2>
           <Ethereum data={binanceETHData} data2={coinbaseETHData} />
           <EthereumRecommendation

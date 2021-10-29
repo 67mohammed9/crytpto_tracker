@@ -32,9 +32,9 @@ function EthereumRecommendation(props) {
     },[props, sellETHRecommendation])
 
     return (
-        <div className="centered">
-            <section className="cards">
-                <article className="card" style={{width: "30rem"}}>
+        <div>
+            <section className="cards" style={{justifyContent: "center"}}>
+                <article className="card" style={{width: "34rem", backgroundColor:"#33cc33"}}>
                     <h3> Recommendation:</h3>
                     <p>
                         {buyETHRecommendation}
