@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 
 function Bitcoin({ data, data2 }) {
 
+    // set up states for BTC from Binance and Coinbase
     const [binanceBTCAPrice, setBinanceBTCAPrice] = useState(0);
     const [binanceBTCBPrice, setBinanceBTCBPrice] = useState(0);
     const [coinbaseBTCAPrice, setCoinbaseBTCAPrice] = useState(0);

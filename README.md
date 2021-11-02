@@ -1,12 +1,17 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This web app was built using React and deployed using firebase hosting. Websockets from Binance and Coinbase were used to stream the data of Bitcoin and Ethereum
 
-## Available Scripts
+Binance:
+https://binance-docs.github.io/apidocs/spot/en/#websocket-market-streams
 
-In the project directory, you can run:
+Coinbase:
+https://docs.cloud.coinbase.com/exchange/docs/overview
 
-### `npm start`
+After cloning the repository run the following command to download all the node dependencies
+#### `npm install`
+
+#### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,12 +19,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
+#### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -27,44 +28,16 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Questionnaire:
 
-### `npm run eject`
+### Are there any sub-optimal choices( or short cuts taken due to limited time ) in your implementation?
+I didnt take short cuts because I believe this is the best implementation I could have come up with for this problem. I figured using a traditional API to get information would get costly if there are a lot of API calls being made. So I researched that using a websocket would be better for scalabilty purposes and supports things that rely on real time changes. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Is any part of it over-designed? ( It is fine to over-design to showcase your skills as long as you are clear about it)
+I created multiple components in react. Each Crypto had its own component and each reccomendation for each crypto had its own component. Although I could have done it in one component I felt that using multiple components made the code cleaner and css styling easier. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### If you have to scale your solution to 100 users/second traffic what changes would you make, if any?
+I believe I did use the optimal choice of using websockets because a websocket can support high traffic. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### What are some other enhancements you would have made, if you had more time to do this implementation?
+If I had more time, I could have built a search feature where the user can search for any cryptocurrencies. I would have to have a general component taking care of cryptocurrency buy and sell prices and the corresponding recommendation.

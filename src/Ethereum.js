@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 
 
 function Ethereum({data, data2}) {
-
+    // set up states for ETH from Binance and Coinbase
     const [binanceETHAPrice, setBinanceETHAPrice] = useState(0)
     const [binanceETHBPrice, setBinanceETHBPrice] = useState(0)
     const [coinbaseETHAPrice, setCoinbaseETHAPrice] = useState(0)

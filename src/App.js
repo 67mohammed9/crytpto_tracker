@@ -8,7 +8,8 @@ import './App.css';
 
 
 
-
+// Create the Websocket connection for Bitcoin and Ethereum feeds from Coinbase and Binance
+// Binance allowed for url manipulation while the Coinbase requires subscription
 const bitcoinBinanceFeeds = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@ticker');
 const ethereumBinanceFeeds = new WebSocket('wss://stream.binance.com:9443/ws/ethusdt@ticker');
 const coinbaseFeeds = new WebSocket('wss://ws-feed.exchange.coinbase.com');
@@ -19,6 +20,7 @@ function App() {
   const [binanceBTCData, setBinanceBTCData] = useState(0)
   const [binanceETHData, setBinanceETHData] = useState(0)
 
+  // Subscribe
   coinbaseFeeds.onopen = (subscribe_message) =>{
      subscribe_message = {
       "type": "subscribe",
@@ -31,6 +33,7 @@ function App() {
     coinbaseFeeds.send(JSON.stringify(subscribe_message))
   }
 
+  // process the Ethereum and Bitcoin data from the Coinbase websocket
   coinbaseFeeds.onmessage = (message) => {
     let wsData = JSON.parse(message.data);
     if (wsData.product_id === 'BTC-USD') {
@@ -41,6 +44,7 @@ function App() {
     }
   }
 
+  // process the Ethereum and Bitcoin data from the Binance websocket
   bitcoinBinanceFeeds.onmessage = (message) => {
     let wsData = JSON.parse(message.data);
     setBinanceBTCData(wsData)
@@ -50,7 +54,8 @@ function App() {
     setBinanceETHData(wsData)
 }
 
-
+// Made different components for Bitcoin and Ethereum and The reccomendations for each crypto
+// Send data from the websocket as props to the components
   return (
     <div className="App">
       <h1>Cryptocurrency Tracker</h1>
