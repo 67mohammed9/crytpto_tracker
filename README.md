@@ -1,4 +1,6 @@
 # Getting Started with Cryptocurrency Tracker Web Application
+Live Solution: https://crypto-tracker-89c44.web.app/
+
 
 This web app was built using React and deployed using firebase hosting. Websockets from Binance and Coinbase were used to stream the data of Bitcoin and Ethereum
 
