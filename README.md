@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Getting Started with Cryptocurrency Tracker Web Application
 
 This web app was built using React and deployed using firebase hosting. Websockets from Binance and Coinbase were used to stream the data of Bitcoin and Ethereum
 
